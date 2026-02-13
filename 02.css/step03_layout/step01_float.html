@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.picture{
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+            float: left;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <article class="clearfix">
+        <div class="picture"></div>
+    </article>
+    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, perspiciatis? Dignissimos fugiat impedit est provident, nisi nobis corrupti aliquid ad, beatae distinctio adipisci, accusamus dolore labore rem saepe voluptates deleniti.</span>
+</body>
+</html>

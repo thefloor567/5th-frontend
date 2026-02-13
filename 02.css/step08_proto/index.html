@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DigitalSaints Studio | High-End Digital Portfolio</title>
+    <!-- Tailwind CSS v3 CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Inter for a clean, modern sans-serif look -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#BFFF00', // Lime green accent
+                        dark: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style data-purpose="global-styles">
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hide scrollbar for cleaner aesthetic while maintaining scroll */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        ::selection {
+            background-color: #BFFF00;
+            color: #000000;
+        }
+    </style>
+    <style data-purpose="hero-layout">
+        /* High-end architectural feel using flex and absolute positioning */
+        .hero-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        /* Statue container to mimic the low-poly image effect */
+        .statue-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .statue-img {
+            max-height: 90vh;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.9;
+            filter: contrast(1.1) brightness(0.9);
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- BEGIN: MainHeader -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center mix-blend-difference"
+        data-purpose="navigation">
+        <!-- Brand Title -->
+        <div class="text-xs font-bold tracking-[0.2em] uppercase mb-4 md:mb-0">
+            DIGITALSAINTS STUDIO
+        </div>
+        <!-- Contact Email -->
+        <div class="hidden lg:block text-xs font-medium tracking-widest text-gray-400">
+            PAUL@DIGITALSAINTS.STUDIO
+        </div>
+        <!-- Navigation Links -->
+        <nav class="flex flex-wrap gap-x-8 gap-y-2 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
+            <div class="flex gap-4 md:gap-8">
+                <a class="hover:text-brand transition-colors duration-300" href="#">HOME</a>
+                <a class="hover:text-brand transition-colors duration-300" href="#">ABOUT</a>
+                <a class="hover:text-brand transition-colors duration-300" href="#">WORK</a>
+            </div>
+            <a class="flex items-center gap-1 hover:text-brand transition-colors duration-300" href="#">
+                SEND AN INQUIRY
+                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    </path>
+                </svg>
+            </a>
+        </nav>
+    </header>
+    <!-- END: MainHeader -->
+    <!-- BEGIN: HeroSection -->
+    <main class="hero-container">
+        <!-- Centered Low-Poly Statue Placeholder -->
+        <div class="statue-wrapper">
+            <!-- Using the provided image from DataStore -->
+            <img alt="Low-poly Statue Artwork" class="statue-img"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjOeBwySb540u2aoefy8O0FRfp2ociOU1Hw2byB601HR_j4pYYx2CuXoJwiEFEMOIfidT1SRtXwYhkbe3iNxbpp5LKeL__4-5Q9xhB4VdCPQ8NMkhxrc3pmlsyf-uatKDVNR3JwQbLEhfo8oYJiNqwBanbUiKdjc25Ytlzm8m8Jyx1CODwKDC1PiUMfbx2Rk2UunAZq-iy1sYO4-Edp5mXcApUU0YjoNNzmKtUHUgkmLkXeMahOXV7pMyYieH5LBU0bNYfkZ6nBQ6K" />
+        </div>
+        <!-- Empty Spacer for Top-Down Flex -->
+        <div></div>
+        <!-- Floating Project Card / Works Overlay -->
+        <div class="relative z-10 self-start mt-auto mb-12 md:mb-0 ml-4 md:ml-8" data-purpose="floating-project-card">
+            <div class="bg-gray-100 p-2 md:p-4 max-w-[280px] md:max-w-[340px] shadow-2xl">
+                <!-- Floating Works Badge -->
+                <div class="flex justify-end mb-2">
+                    <span
+                        class="bg-brand text-black text-[10px] font-black px-2 py-0.5 flex items-center gap-1 uppercase">
+                        WORKS
+                        <svg class="h-2.5 w-2.5" fill="currentColor" viewbox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </div>
+                <!-- Collage Style Preview -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-white aspect-square flex items-center justify-center p-2">
+                        <img alt="Project 1" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzeVppWhrA_LauAHnX6uas0SVRCpOYgSdV1dCjai5PExHrWVMxHHCEUYqsZRKgX-GM1YcMDo1jz7HBGbRnV1vVTCjLdf04hHXybc20rXVp1c4as0Ig_1YXvkYJJLQrPRtbc5KDlT5rNpilZtVu3scbAeuXShpPRn9exMqK5OLAdtrinTnD2IvC5WC1vlOUa4qaY9viKOmW_uOgRA7DImCvNrx9vC13KojH9HKg9cczPzkEcvZvVfXTIsg3dmxPS75W8x3YYLGXhMnD" />
+                    </div>
+                    <div class="bg-white aspect-square flex items-center justify-center p-2">
+                        <img alt="Project 2" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxh2o8Kft82RXwjq_LuJI41mQBIV4D327XJ7y6DMwK5-HCqCAfdyRerHxZy5JXKD8Y07X_zsnZUx9d6yjTl5Qyu6p_W69tDUnP4QN4vSAf2fJf99Anbcga_JyCzsbDQiVGOo9K9n94dWDRzFR59FKq4QRDvmUJkuZi4MGqLe5lJEwwAHkbvF9bjcngZVqfRl7rqMOq3leFN_5kHO0l2Qd6h_gYFVAksYjDXH9YTby8EuZMpw6xZAgzXmWnlA631bsAvIMBB9CXltOv" />
+                    </div>
+                </div>
+                <div class="mt-2 text-black text-[9px] font-bold tracking-tighter flex justify-between uppercase">
+                    <span>Digital Identity 2024</span>
+                    <span class="text-gray-400">View Project</span>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Indicators -->
+        <div class="relative z-10 flex justify-end p-4 md:p-8" data-purpose="scroll-indicator">
+            <div class="text-[10px] font-bold tracking-[0.3em] uppercase flex items-center gap-2 group cursor-pointer">
+                KEEP SCROLLING
+                <div class="w-8 h-[1px] bg-white group-hover:w-12 transition-all duration-500"></div>
+            </div>
+        </div>
+    </main>
+    <!-- END: HeroSection -->
+    <!-- BEGIN: InteractiveScripts -->
+    <script data-purpose="parallax-effect">
+        // Simple parallax movement for the statue image
+        document.addEventListener('mousemove', (e) => {
+            const statue = document.querySelector('.statue-img');
+            const mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+            const mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+
+            if (statue) {
+                statue.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+            }
+        });
+    </script>
+    <!-- END: InteractiveScripts -->
+</body>
+
+</html>

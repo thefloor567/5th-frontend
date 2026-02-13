@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            padding: 15px;
+        }
+        .box h2.title{
+            color: blue;
+        }
+        .box button:hover{
+            background-color: gray;
+            cursor: pointer;
+        }
+        .box button{
+            display: block;
+            margin-left: auto;
+            color: gray;
+            font-size: 14px;
+        }
+        .box h2.title::before{
+            content: "※ ";
+        }
+        .box p.content{
+            font-style: italic;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 class="title">공지사항</h2>
+        <p class="content">CSS 연습 중입니다.</p>
+        <button class="btn">확인</button>
+    </div>
+</body>
+</html>
